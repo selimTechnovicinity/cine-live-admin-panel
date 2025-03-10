@@ -14,7 +14,7 @@ export default function Home() {
     if (!accessToken) {
       router.push("/login");
     } else {
-      router.push("/users");
+      router.push("/operators");
     }
   }, [router]);
 

@@ -25,7 +25,7 @@ const ForgotPassword = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
           <button className="w-full p-2 mt-4 bg-blue-950 cursor-pointer text-white rounded-md">
-            Send Reset Link
+            Send OTP
           </button>
         </form>
       </div>

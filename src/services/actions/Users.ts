@@ -15,16 +15,24 @@ export const getAllRestaurants = async () => {
   return restaurants;
 };
 
-export const getAllUsers = async (accessToken: string) => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/users`, {
-    headers: {
-      Authorization: `Bearer ${accessToken}`,
-    },
-    next: {
-      revalidate: 1,
-    },
-    cache: "no-store",
-  });
+export const getAllUsers = async (
+  accessToken: string,
+  role: string,
+  pageNo: number,
+  limit: number
+) => {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BACKEND_URL}/users?role=${role}&page=${pageNo}&limit=${limit}`,
+    {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+      next: {
+        revalidate: 20,
+      },
+      cache: "no-store",
+    }
+  );
   const users = await res.json();
   return users;
 };

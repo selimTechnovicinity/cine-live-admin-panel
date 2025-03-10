@@ -27,15 +27,6 @@ const Sidebar = () => {
         <ul className="space-y-4 p-4">
           <li>
             <Link
-              href="/restaurants"
-              className="flex items-center gap-3 hover:bg-blue-700 p-2 rounded"
-            >
-              <FiHome size={20} />
-              <span>Restaurants</span>
-            </Link>
-          </li>
-          <li>
-            <Link
               href="/operators"
               className="flex items-center gap-3 hover:bg-blue-700 p-2 rounded"
             >
@@ -45,13 +36,14 @@ const Sidebar = () => {
           </li>
           <li>
             <Link
-              href="/users"
+              href="/restaurants"
               className="flex items-center gap-3 hover:bg-blue-700 p-2 rounded"
             >
-              <FiUser size={20} />
-              <span>Users</span>
+              <FiHome size={20} />
+              <span>Restaurants</span>
             </Link>
           </li>
+
           <li>
             <Link
               href="/bookings"

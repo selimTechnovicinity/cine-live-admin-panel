@@ -1,18 +1,9 @@
 import { TUser } from "@/app/(withCommonLayout)/users/page";
-import Link from "next/link";
 import ToggleButton from "../ToggleButton";
 
 export default function UserTable({ users }: { users: TUser[] }) {
   return (
-    <div className="my-10 mx-auto w-full max-w-6xl px-4">
-      <div className="mb-4 flex justify-end">
-        <Link href="/users/create">
-          <button className="bg-blue-950 cursor-pointer text-white px-4 py-2 rounded-lg transition">
-            + Add new user
-          </button>
-        </Link>
-      </div>
-
+    <div className="my-5 mx-auto w-full max-w-6xl px-4">
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
         <table className="min-w-full text-sm text-left text-gray-500">
           <thead>
